@@ -86,6 +86,7 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="DataEntity.cs" />
     <Compile Include="Grade.cs" />
+    <Compile Include="GradeBook.cs" />
     <Compile Include="GradeBookModule.cs" />
     <Compile Include="Models\Generated\Database.cs">
       <AutoGen>True</AutoGen>
@@ -108,6 +109,7 @@
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\Index.cshtml" />
     <Content Include="Views\About.cshtml" />
+    <Content Include="Views\Summary.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

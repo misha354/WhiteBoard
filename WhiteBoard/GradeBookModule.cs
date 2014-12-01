@@ -8,7 +8,7 @@ namespace WhiteBoard
 {
    public class GradeBookModule : NancyModule
    {
-      public GradeBookModule(PetaPoco.Database db, List<Grade> grades)
+      public GradeBookModule(PetaPoco.Database db, List<Grade> grades, GradeBook gradebook)
          : base()
       {
          Get["/"] = _ =>
@@ -32,11 +32,16 @@ namespace WhiteBoard
                try
                {
                   gradeValue = Convert.ToInt32(Request.Form.NumberGrade.ToString());
+
+                  if (gradeValue < 0 || gradeValue > 100)
+                  {
+                     throw new ArgumentOutOfRangeException();
+                  }
                }
                catch
                {
-                  ViewBag["error"] = "Invalid grade";
-                  return View["Index", grades];
+                  Session["error"] = "Invalid grade (0-100)";
+                  return Response.AsRedirect("/");
                }
 
                Student student = new Student(db, Request.Form.FirstName, Request.Form.LastName);
@@ -65,6 +70,11 @@ namespace WhiteBoard
                      return Response.AsRedirect("/");
                   }
                }
+            };
+
+         Get["Summary"] = _ =>
+            {
+               return View["Summary", gradebook];
             };
       }
    }

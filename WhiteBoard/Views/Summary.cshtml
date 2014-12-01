@@ -1,0 +1,14 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<GradeBook>
+@using WhiteBoard;
+
+@{
+    Layout = "Views/_Layout.cshtml";
+}
+
+<p>
+    Average: @String.Format("{0:F2}",@Model.Average) <br />
+    Lowest grade: @Model.Min <br />
+    Highest grade: @Model.Max
+</p>
+
+<span style="white-space: pre-wrap">@Model.OutputBarChart()</span>
