@@ -5,4 +5,10 @@
     Layout = "Views/_Layout.cshtml";
 }
 
-<span style="white-space: pre-line">@Model.OutputBarChart()</span>
+<p>
+    Average: @String.Format("{0:F2}",@Model.Average) <br />
+    Lowest grade: @Model.Min <br />
+    Highest grade: @Model.Max
+</p>
+
+<span style="white-space: pre-wrap">@Model.OutputBarChart()</span>
