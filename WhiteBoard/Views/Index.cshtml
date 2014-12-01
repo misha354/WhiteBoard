@@ -1,0 +1,50 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<List<WhiteBoard.Grade>>
+@using WhiteBoard;
+
+@{
+    Layout = "Views/_Layout.cshtml";
+}
+    <h1>Welcome to the gradebook!</h1>
+
+    <h3>Add a grade</h3>
+    <form action="/AddGrade" method="post">
+        <span>
+            <label for="FirstName">First name:</label>
+            <input id ="FirstName" type="text" name="FirstName"/>
+        </span>
+
+        <span>
+            <label for="LastName">Last name:</label>
+            <input type="text" id="LastName" name="LastName">
+        </span>
+
+        <span>
+            <label for="NumberGrade">Grade:</label>
+            <input type="text" name="NumberGrade">
+        </span>
+
+        <span>
+            <input type="submit"/>
+        </span>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        @foreach (Grade grade in Model)
+        {
+            <tr>
+                <td>@grade.Student.FirstName</td>
+                <td>@grade.Student.LastName</td>
+                <td>@grade.NumberGrade</td>
+            </tr>
+        }
+        </tbody>
+    </table>
