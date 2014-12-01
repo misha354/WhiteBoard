@@ -19,6 +19,12 @@ namespace WhiteBoard
             return View["Index", grades];
          };
 
+         Get["/About"] = _ =>
+         {
+            return View["About"];
+         };
+
+
          Post["/AddGrade"] = _ =>
             {
                int gradeValue = 0;
@@ -49,14 +55,14 @@ namespace WhiteBoard
                      }
                      else
                      {
-                        ViewBag["error"] = "Problem adding grade";
-                        return View["Index", grades];
+                        Session["error"] = "Problem adding grade";
+                        return Response.AsRedirect("/");
                      }
                   }
                   else
                   {
-                     ViewBag["error"] = "Problem adding student (please check for a duplicate)";
-                     return View["Index", new List<Grade>()];
+                     Session["error"] = "Problem adding student (please check for a duplicate)";
+                     return Response.AsRedirect("/");
                   }
                }
             };

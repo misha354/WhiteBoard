@@ -107,6 +107,7 @@
     <Content Include="App_Data\GradeBook.sqlite" />
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\Index.cshtml" />
+    <Content Include="Views\About.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

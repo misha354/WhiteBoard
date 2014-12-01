@@ -4,10 +4,10 @@
 @{
     Layout = "Views/_Layout.cshtml";
 }
-    <h1>Welcome to the gradebook!</h1>
 
-    <h3>Add a grade</h3>
-    <form action="/AddGrade" method="post">
+<h3>Add a grade</h3>
+
+<form action="/AddGrade" method="post">
         <span>
             <label for="FirstName">First name:</label>
             <input id ="FirstName" type="text" name="FirstName"/>
@@ -26,9 +26,18 @@
         <span>
             <input type="submit"/>
         </span>
-    </form>
+</form>
 
-    <table>
+@if (ViewBag["error"] != null)
+ { 
+        <div>
+            @ViewBag["error"];
+        </div>
+ }
+        
+<br />
+
+<table>
         <thead>
             <tr>
                 <th>First name</th>
@@ -47,4 +56,4 @@
             </tr>
         }
         </tbody>
-    </table>
+</table>
