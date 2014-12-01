@@ -25,6 +25,10 @@
          var db = new PetaPoco.Database("GradeBook");
          var sql = PetaPoco.Sql.Builder.Select("Grades.GradeId, Grades.NumberGrade, Students.StudentId, Students.FirstName, Students.LastName").From("Grades").InnerJoin("Students").On("Students.StudentId = Grades.StudentId");
          List<Grade> grades = db.Fetch<Grade, Student>(sql);
+
+         GradeBook gradebook = new GradeBook(grades);
+         container.Register(gradebook);
+
          container.Register(db);
          container.Register(grades);
       }

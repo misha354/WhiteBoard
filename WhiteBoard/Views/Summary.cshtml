@@ -1,0 +1,8 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<GradeBook>
+@using WhiteBoard;
+
+@{
+    Layout = "Views/_Layout.cshtml";
+}
+
+<span style="white-space: pre-line">@Model.OutputBarChart()</span>
