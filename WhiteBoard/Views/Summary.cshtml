@@ -5,10 +5,21 @@
     Layout = "Views/_Layout.cshtml";
 }
 
-<p>
-    Average: @String.Format("{0:F2}",@Model.Average) <br />
-    Lowest grade: @Model.Min <br />
-    Highest grade: @Model.Max
-</p>
+<table class="table">
+    <tr>
+        <th>Average: </th>
+        <td>@String.Format("{0:F2}", @Model.Average)</td>
+    </tr>
+    <tr>
+        <th>Lowest grade:</th>
+        <td>@Model.Min</td>
+    </tr>
+    <tr>
+        <th>Highest grade:</th>
+        <td>@Model.Max</td>
+    </tr>
+</table>     
+    
 
+<h3>Grade distribution:</h3>
 <span style="white-space: pre-wrap">@Model.OutputBarChart()</span>

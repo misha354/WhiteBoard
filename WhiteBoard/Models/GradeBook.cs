@@ -66,7 +66,7 @@ namespace WhiteBoard
          int[] bins = new int[NUM_BINS]; //the histogram bins
          
          //the output string
-         string histogram = "Grade Distribution:\n";
+         string histogram = "";
 
          //Build the bin counts
          foreach (Grade grade in grades)
