@@ -7,30 +7,30 @@
 
 <h3>Add a grade</h3>
 
-<form action="/AddGrade" method="post">
-        <span>
-            <label for="FirstName">First name:</label>
-            <input id ="FirstName" type="text" name="FirstName"/>
-        </span>
+<form class="form-inline" role="form" action="/AddGrade" method="post">
+    <div class="form-group">
+        <label for="FirstName">First name:</label>
+        <input type="text" class="form-control" name="FirstName">
+    </div>
 
-        <span>
-            <label for="LastName">Last name:</label>
-            <input type="text" id="LastName" name="LastName">
-        </span>
-
-        <span>
-            <label for="NumberGrade">Grade:</label>
-            <input type="text" name="NumberGrade">
-        </span>
-
-        <span>
-            <input type="submit"/>
-        </span>
+    <div class="form-group">
+        <label for="LastName">Last name:</label>
+        <input type="text" class="form-control" name="LastName">
+    </div>
+    <div class="form-group">
+        <label for="NumberGrade">Grade</label>
+        <input type="text" class="form-control" name="NumberGrade">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-default">Submit</button>
+    </div>
 </form>
+
+<br />
 
 @if (ViewBag["error"] != null)
  { 
-        <div>
+        <div class="alert-danger">
             @ViewBag["error"]
         </div>
  }

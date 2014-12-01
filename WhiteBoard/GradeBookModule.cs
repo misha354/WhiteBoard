@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Nancy;
 using Nancy.ModelBinding;
 using System.Data.SQLite;
@@ -13,9 +14,6 @@ namespace WhiteBoard
       {
          Get["/"] = _ =>
          {
-            System.Diagnostics.Debug.WriteLine("{0} {1} {2}", Request.Path, Request.Path.Length, Request.Path.Trim() == "/");
-
-
             ViewBag["error"] = Session["error"];
             Session["error"] = null;
 
@@ -47,7 +45,12 @@ namespace WhiteBoard
                   return Response.AsRedirect("/");
                }
 
-               Student student = new Student(db, Request.Form.FirstName, Request.Form.LastName);
+               //Read the name
+               TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
+               string firstName = myTI.ToTitleCase(Request.Form.FirstName);
+               string lastName = myTI.ToTitleCase(Request.Form.LastName);
+
+               Student student = new Student(db, firstName, lastName);
                Grade grade = new Grade(db, student, gradeValue);
 
                using (var scope = db.GetTransaction())

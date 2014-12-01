@@ -19,3 +19,4 @@ C:\Users\Mike\Projects\IT-110--Examples-and-Labs\WhiteBoard\WhiteBoard\bin\Syste
 C:\Users\Mike\Projects\IT-110--Examples-and-Labs\WhiteBoard\WhiteBoard\bin\System.Web.Razor.xml
 C:\Users\Mike\Projects\IT-110--Examples-and-Labs\WhiteBoard\WhiteBoard\obj\Debug\WhiteBoard.dll
 C:\Users\Mike\Projects\IT-110--Examples-and-Labs\WhiteBoard\WhiteBoard\obj\Debug\WhiteBoard.pdb
+C:\Users\Mike\Projects\IT-110--Examples-and-Labs\WhiteBoard\WhiteBoard\obj\Debug\WhiteBoard.csprojResolveAssemblyReference.cache
