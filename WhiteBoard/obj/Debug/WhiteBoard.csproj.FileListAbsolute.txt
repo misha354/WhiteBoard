@@ -17,6 +17,5 @@ C:\Users\Mike\Projects\IT-110--Examples-and-Labs\WhiteBoard\WhiteBoard\bin\Nancy
 C:\Users\Mike\Projects\IT-110--Examples-and-Labs\WhiteBoard\WhiteBoard\bin\Nancy.ViewEngines.Razor.xml
 C:\Users\Mike\Projects\IT-110--Examples-and-Labs\WhiteBoard\WhiteBoard\bin\System.Data.SQLite.xml
 C:\Users\Mike\Projects\IT-110--Examples-and-Labs\WhiteBoard\WhiteBoard\bin\System.Web.Razor.xml
-C:\Users\Mike\Projects\IT-110--Examples-and-Labs\WhiteBoard\WhiteBoard\obj\Debug\WhiteBoard.csprojResolveAssemblyReference.cache
 C:\Users\Mike\Projects\IT-110--Examples-and-Labs\WhiteBoard\WhiteBoard\obj\Debug\WhiteBoard.dll
 C:\Users\Mike\Projects\IT-110--Examples-and-Labs\WhiteBoard\WhiteBoard\obj\Debug\WhiteBoard.pdb

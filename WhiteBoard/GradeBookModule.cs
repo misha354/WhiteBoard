@@ -13,6 +13,9 @@ namespace WhiteBoard
       {
          Get["/"] = _ =>
          {
+            System.Diagnostics.Debug.WriteLine("{0} {1} {2}", Request.Path, Request.Path.Length, Request.Path.Trim() == "/");
+
+
             ViewBag["error"] = Session["error"];
             Session["error"] = null;
 
